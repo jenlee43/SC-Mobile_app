@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="manifest.json">
     <title>Shepherd's Corner Donation App</title>
     <style>
         * { 
@@ -59,7 +59,7 @@
         .logo {
             width: 90px;
             height: 90px;
-            background: var(--accent-color);
+            background: url('logo.png') no-repeat center / cover;
             border-radius: 50%;
             margin: 0 auto 15px;
             display: flex;
@@ -68,7 +68,7 @@
             font-size: 42px;
             color: var(--primary-color);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 3px solid white;
+            border: 2px solid  white;
         }
         
         h1 { 
@@ -365,15 +365,15 @@
         <header>
             <div class="logo">♰</div>
             <h1>Shepherd's Corner</h1>
-            <p class="tagline">Helping the homeless with food, shelter, and hope</p>
+            <p class="tagline"> Helping the homeless with food, essentials, and hope.</p>
         </header>
 
         <main>
             <div class="card">
                 <h2>Our Mission</h2>
                 <p style="text-align: center; line-height: 1.6;">
-                    At Shepherd's Corner, we provide essential resources including food, clothing, 
-                    shelter, and support services to homeless individuals and families in our community. 
+                    At Shepherd's Corner, we provide essential resources including food, clothing, care kit, sleeping gear such as blankets,
+                    and support services to homeless individuals and families in our community. 
                     Your generous donation enables us to continue this vital work and bring hope to those in need.
                 </p>
             </div>
@@ -411,15 +411,15 @@
                 <h2>Your Impact</h2>
                 <div class="impact-items">
                     <div class="impact-item">
-                        <div class="impact-value">5</div>
+                        <div class="impact-value">12</div>
                         <div class="impact-label">Nutritious Meals</div>
                     </div>
                     <div class="impact-item">
-                        <div class="impact-value">2</div>
-                        <div class="impact-label">Nights of Shelter</div>
+                        <div class="impact-value">8</div>
+                        <div class="impact-label">Bundles of Warmth Gear</div>
                     </div>
                     <div class="impact-item">
-                        <div class="impact-value">1</div>
+                        <div class="impact-value">10</div>
                         <div class="impact-label">Essential Care Kit</div>
                     </div>
                 </div>
@@ -430,9 +430,9 @@
             <div class="footer-content">
                 <div class="footer-logo">♰</div>
                 <p><strong>Shepherd's Corner</strong></p>
-                <p>123 Hope Street, Your City</p>
+                <p>123 Hope Street, Prince George</p>
                 <p>Contact: info@shepherdscorner.org</p>
-                <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">&copy; 2023 All Rights Reserved</p>
+                <p style="margin-top: 10px; font-size: 14px; opacity: 0.8;">&copy; 2025 All Rights Reserved</p>
             </div>
         </footer>
     </div>
@@ -441,22 +441,11 @@
         <div class="modal-content">
             <div class="modal-icon">💝</div>
             <h2>Thank You For Your Generosity!</h2>
-            <p>Your donation of <strong id="donationAmount" style="color: var(--primary-color);">$0</strong> will help provide:</p>
+            <p>Your donation of <strong id="donationAmount" style="color: var(--primary-color);">$0</strong> will help provide essential services to those in need.
+
+Together, we're making a difference in our community.</p>
             
-            <div class="impact-list">
-                <div>
-                    <span class="impact-icon">🍽️</span>
-                    <span><strong>5 meals</strong> for individuals facing hunger</span>
-                </div>
-                <div>
-                    <span class="impact-icon">🏠</span>
-                    <span><strong>2 nights</strong> of safe, warm shelter</span>
-                </div>
-                <div>
-                    <span class="impact-icon">🎁</span>
-                    <span><strong>1 essential care package</strong> with hygiene items</span>
-                </div>
-            </div>
+        
             
             <p style="margin-top: 15px; font-style: italic;">"We make a living by what we get, but we make a life by what we give."</p>
             <button class="donate-btn" id="closeModal" style="margin-top: 20px;">Continue</button>
