@@ -1,0 +1,21 @@
+{
+  "name": "Shepherd's Corner Donation App",
+  "short_name": "Shepherd's Corner",
+  "description": "Help the homeless with food, shelter, and essential needs",
+  "start_url": "/donation-app.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c7744",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiMyYzc3NDQiLz4KPHBhdGggZD0iTTk2IDY0Qzc4LjMyNjQgNjQgNjQgNzguMzI2NCA2NCA5NkM2NCAxMTMuNjc0IDc4LjMyNjQgMTI4IDk2IDEyOEMxMTMuNjc0IDEyOCAxMjggMTEzLjY3NCAxMjggOTZDMTI4IDc4LjMyNjQgMTEzLjY3NCA2NCA5NiA2NFpNMTI4IDE0NEg2NEM1NS4xNjM0IDE0NCA0OCAxNTEuMTY0IDQ4IDE2MFYxNzZIMTQ0VjE2MEMxNDQgMTUxLjE2NCAxMzYuODM3IDE0NCAxMjggMTQ0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLmm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiMyYzc3NDQiLz4KPHBhdGggZD0iTTI1NiAxNzBDMTkyLjg3MiAxNzAgMTQyIDIxOS44NzIgMTQyIDI4M0MxNDIgMzQ2LjEyOCAxOTIuODcyIDM5NiAyNTYgMzk2QzMxOS4xMjggMzk2IDM3MCAzNDYuMTI4IDM3MCAyODNDMzcwIDIxOS44NzIgMzE5LjEyOCAxNzAgMjU2IDE3MFpNMzcwIDM4NEgxNDJDMTIzLjE2NCAzODQgMTE2IDM5MS4xNjQgMTE2IDQwMFY0NjhIMzk2VjQwMEMzOTYgMzkxLjE2NCAzODguODM3IDM4NCAzNzAgMzg0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
