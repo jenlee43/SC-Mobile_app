@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="manifest" href="manifest.json">
+
     <title>Shepherd's Corner Donation App</title>
     <style>
         * { 
@@ -34,6 +35,44 @@
             background: var(--card-bg);
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+		
+		 header {
+            display: flex;
+            align-items: center;
+            background-color: #2c5530;
+            color: white;
+            padding: 20px 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background-color: white;
+            color: #e9c46a;
+            padding: 12px;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         header {
@@ -362,19 +401,23 @@
 </head>
 <body>
     <div class="app-container">
-        <header>
-            <div class="logo">♰</div>
+	<header>
+        <div class="logo-container">
+            <div class="logo">SC</div>
+        </div>
+        <div class="header-content">
             <h1>Shepherd's Corner</h1>
-            <p class="tagline"> Helping the homeless with food, essentials, and hope.</p>
-        </header>
+            <p class="tagline">"Caring for our homeless community"</p>
+        </div>
+    </header>
+	
 
         <main>
             <div class="card">
-                <h2>Our Mission</h2>
+                <h2>Make a Difference Today</h2>
                 <p style="text-align: center; line-height: 1.6;">
-                    At Shepherd's Corner, we provide essential resources including food, clothing, care kit, sleeping gear such as blankets,
-                    and support services to homeless individuals and families in our community. 
-                    Your generous donation enables us to continue this vital work and bring hope to those in need.
+                
+Your generous donation provides meals, warm clothing, and essential needs for our neighbors experiencing homelessness.
                 </p>
             </div>
 
