@@ -2,7 +2,7 @@
   "name": "Shepherd's Corner Donation App",
   "short_name": "Shepherd's Corner",
   "description": "Help the homeless with food, shelter, and essential needs",
-  "start_url": "/donation-app.html",
+  "start_url": "https://sc-mobile-app.vercel.app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#8B0000",
