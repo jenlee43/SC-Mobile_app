@@ -8,12 +8,12 @@
   "theme_color": "#8B0000",
   "icons": [
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiMyYzc3NDQiLz4KPHBhdGggZD0iTTk2IDY0Qzc4LjMyNjQgNjQgNjQgNzguMzI2NCA2NCA5NkM2NCAxMTMuNjc0IDc4LjMyNjQgMTI4IDk2IDEyOEMxMTMuNjc0IDEyOCAxMjggMTEzLjY3NCAxMjggOTZDMTI4IDc4LjMyNjQgMTEzLjY3NCA2NCA5NiA2NFpNMTI4IDE0NEg2NEM1NS4xNjM0IDE0NCA0OCAxNTEuMTY0IDQ4IDE2MFYxNzZIMTQ0VjE2MEMxNDQgMTUxLjE2NCAxMzYuODM3IDE0NCAxMjggMTQ0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+",
+      "src": "/icon.png",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/png"
     },
     {
-      "src": "icon.png",
+      "src": "/icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
