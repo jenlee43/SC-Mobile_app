@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="manifest" href="manifest.json">
-
+    <link rel="manifest" href="manifest.json">
     <title>Shepherd's Corner Donation App</title>
     <style>
         * { 
@@ -36,15 +35,14 @@
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-		
-		 header {
+        
+        header {
             display: flex;
             align-items: center;
-            background-color: #2c5530;
+            background-color: #8B0000;
             color: white;
             padding: 20px 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-       
         }
         
         .logo-container {
@@ -57,7 +55,7 @@
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
-            background-color: white;
+            background: url('logo.png') no-repeat center / cover;
             color: #e9c46a;
             padding: 12px;
             border-radius: 50%;
@@ -69,60 +67,23 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .header-content h1 {
+            font-family: 'Cinzel', serif;
+            color: #FFFFFF;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            font-weight: 900;
+            font-size: 1.8em;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 10px 0;          
         }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary-color), #A52A2A);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-   
-        .logo {
-            width: 90px;
-            height: 90px;
-            background: url('logo.png') no-repeat center / cover;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 42px;
-            color: var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 2px solid  white;
-        }
-        
-        h1 { 
-            font-size: 26px; 
-            margin-bottom: 5px; 
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-		
-		.header-content h1{
-		    font-family: 'Cinzel', serif;
-			color: #FFFFFF;
-			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-			font-weight: 900;
-			font-size: 1.8em;
-			letter-spacing: 1.8px;
-			text-transform: uppercase;
-			margin: 0;
-			padding: 10px 0;			
-		}
         
         .tagline { 
             color: #FFE5B4;
-			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-			font-style: italic;
-			margin-top: 4px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-style: italic;
+            margin-top: 4px;
         }
         
         main { 
@@ -295,6 +256,7 @@
             color: var(--accent-color);
         }
         
+        /* Modal Styles */
         .modal {
             position: fixed;
             top: 0; 
@@ -319,11 +281,36 @@
             animation: popIn 0.4s;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             border: 3px solid var(--accent-color);
+            position: relative;
         }
         
         @keyframes popIn {
             0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Close Button (X) */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: var(--text-light);
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .close-btn:hover {
+            background: #f0f0f0;
+            color: var(--primary-color);
         }
         
         .modal-icon {
@@ -336,28 +323,77 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 24px;
-        }
-        
-        .impact-list {
-            text-align: left;
-            margin: 20px 0;
             padding: 0 20px;
         }
         
-        .impact-list div {
-            padding: 8px 0;
-            border-bottom: 1px solid #f0f0f0;
+        /* Payment Options Styles */
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .payment-option {
             display: flex;
             align-items: center;
+            padding: 18px 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+            text-align: left;
         }
         
-        .impact-list div:last-child {
-            border-bottom: none;
+        .payment-option:hover {
+            background: #f0f0f0;
+            border-color: var(--primary-color);
+            transform: translateX(5px);
         }
         
-        .impact-icon {
-            margin-right: 10px;
+        .payment-option.selected {
+            background: rgba(139, 0, 0, 0.05);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(139, 0, 0, 0.1);
+        }
+        
+        .payment-icon {
+            font-size: 30px;
+            margin-right: 15px;
+            width: 50px;
+            text-align: center;
+        }
+        
+        .payment-details {
+            flex: 1;
+        }
+        
+        .payment-details h3 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .payment-details p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .payment-arrow {
+            color: var(--primary-color);
             font-size: 20px;
+            opacity: 0.7;
+        }
+        
+        .selected-amount-display {
+            background: rgba(139, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
         }
         
         .instructions {
@@ -400,27 +436,52 @@
         .show-instructions:hover {
             background: rgba(139, 0, 0, 0.1);
         }
+        
+        .continue-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        
+        .continue-btn:hover {
+            background: #A52A2A;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+        }
+        
+        .continue-btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
     <div class="app-container">
-	<header>
-        <div class="logo-container">
-            <div class="logo">SC</div>
-        </div>
-        <div class="header-content">
-            <h1>Shepherd's Corner</h1>
-            <p class="tagline">"Caring for our homeless community"</p>
-        </div>
-    </header>
-	
+        <header>
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+            <div class="header-content">
+                <h1>Shepherd's Corner</h1>
+                <p class="tagline">"Caring for our homeless community"</p>
+            </div>
+        </header>
 
         <main>
             <div class="card">
                 <h2>Make a Difference Today</h2>
                 <p style="text-align: center; line-height: 1.6;">
-                
-Your generous donation provides meals, warm clothing, and essential needs for our neighbors experiencing homelessness.
+                    Your generous donation provides meals, warm clothing, and essential needs for our neighbors experiencing homelessness.
                 </p>
             </div>
 
@@ -483,15 +544,57 @@ Your generous donation provides meals, warm clothing, and essential needs for ou
         </footer>
     </div>
 
+    <!-- Payment Options Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closePaymentModal">&times;</button>
+            <div class="modal-icon">💳</div>
+            <h2>Select Payment Method</h2>
+            
+            <div class="selected-amount-display" id="selectedAmountDisplay">
+                Donation Amount: $0
+            </div>
+            
+            <div class="payment-options">
+                <div class="payment-option" data-method="paypal">
+                    <div class="payment-icon">🔵</div>
+                    <div class="payment-details">
+                        <h3>PayPal</h3>
+                        <p>Pay securely with your PayPal account</p>
+                    </div>
+                    <div class="payment-arrow">→</div>
+                </div>
+                
+                <div class="payment-option" data-method="credit-card">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-details">
+                        <h3>Credit/Debit Card</h3>
+                        <p>Visa, Mastercard, American Express</p>
+                    </div>
+                    <div class="payment-arrow">→</div>
+                </div>
+                
+                <div class="payment-option" data-method="bank-transfer">
+                    <div class="payment-icon">🏦</div>
+                    <div class="payment-details">
+                        <h3>Bank Transfer</h3>
+                        <p>Direct transfer from your bank account</p>
+                    </div>
+                    <div class="payment-arrow">→</div>
+                </div>
+            </div>
+            
+            <button class="continue-btn" id="continuePayment" disabled>Continue to Payment</button>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
     <div class="modal" id="thankYouModal">
         <div class="modal-content">
+            <button class="close-btn" id="closeThankYouModal">&times;</button>
             <div class="modal-icon">💝</div>
             <h2>Thank You For Your Generosity!</h2>
-            <p>Your donation of <strong id="donationAmount" style="color: var(--primary-color);">$0</strong> will help provide essential services to those in need.
-
-Together, we're making a difference in our community.</p>
-            
-        
+            <p>Your donation of <strong id="donationAmount" style="color: var(--primary-color);">$0</strong> via <strong id="paymentMethod">Payment Method</strong> will help provide essential services to those in need. Together, we're making a difference in our community.</p>
             
             <p style="margin-top: 15px; font-style: italic;">"We make a living by what we get, but we make a life by what we give."</p>
             <button class="donate-btn" id="closeModal" style="margin-top: 20px;">Continue</button>
@@ -503,13 +606,21 @@ Together, we're making a difference in our community.</p>
         const amountOptions = document.querySelectorAll('.amount-option');
         const customAmount = document.getElementById('customAmount');
         const donateButton = document.getElementById('donateButton');
+        const paymentModal = document.getElementById('paymentModal');
         const thankYouModal = document.getElementById('thankYouModal');
         const donationAmount = document.getElementById('donationAmount');
+        const selectedAmountDisplay = document.getElementById('selectedAmountDisplay');
+        const paymentMethodDisplay = document.getElementById('paymentMethod');
+        const closePaymentModal = document.getElementById('closePaymentModal');
+        const closeThankYouModal = document.getElementById('closeThankYouModal');
         const closeModal = document.getElementById('closeModal');
+        const continuePayment = document.getElementById('continuePayment');
         const showInstructionsBtn = document.getElementById('showInstructions');
         const installationInstructions = document.getElementById('installationInstructions');
+        const paymentOptions = document.querySelectorAll('.payment-option');
 
         let selectedAmount = 0;
+        let selectedPaymentMethod = null;
 
         // Handle amount selection
         amountOptions.forEach(option => {
@@ -527,25 +638,105 @@ Together, we're making a difference in our community.</p>
             selectedAmount = this.value;
         });
 
-        // Donate button
+        // Donate button - shows payment options modal
         donateButton.addEventListener('click', function() {
             if (!selectedAmount || selectedAmount <= 0) {
                 alert('Please select or enter a donation amount');
                 return;
             }
             
+            // Update the selected amount display
+            selectedAmountDisplay.textContent = `Donation Amount: $${selectedAmount}`;
+            
+            // Reset payment selection
+            paymentOptions.forEach(option => option.classList.remove('selected'));
+            selectedPaymentMethod = null;
+            continuePayment.disabled = true;
+            
+            // Show payment modal
+            paymentModal.style.display = 'flex';
+        });
+
+        // Handle payment option selection
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedPaymentMethod = this.getAttribute('data-method');
+                continuePayment.disabled = false;
+            });
+        });
+
+        // Continue to process payment
+        continuePayment.addEventListener('click', function() {
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            // In a real app, here you would redirect to the actual payment processor
+            // For this demo, we'll just show the thank you modal
+            
+            // Update thank you modal with details
             donationAmount.textContent = '$' + selectedAmount;
+            
+            // Set payment method text
+            let methodText = '';
+            switch(selectedPaymentMethod) {
+                case 'paypal':
+                    methodText = 'PayPal';
+                    break;
+                case 'credit-card':
+                    methodText = 'Credit Card';
+                    break;
+                case 'bank-transfer':
+                    methodText = 'Bank Transfer';
+                    break;
+                default:
+                    methodText = 'your selected payment method';
+            }
+            paymentMethodDisplay.textContent = methodText;
+            
+            // Hide payment modal and show thank you modal
+            paymentModal.style.display = 'none';
             thankYouModal.style.display = 'flex';
         });
 
-        // Close modal
+        // Close payment modal
+        closePaymentModal.addEventListener('click', function() {
+            paymentModal.style.display = 'none';
+        });
+
+        // Close thank you modal with X button
+        closeThankYouModal.addEventListener('click', function() {
+            thankYouModal.style.display = 'none';
+            resetDonationForm();
+        });
+
+        // Close thank you modal with continue button
         closeModal.addEventListener('click', function() {
             thankYouModal.style.display = 'none';
-            // Reset
+            resetDonationForm();
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+            if (event.target === thankYouModal) {
+                thankYouModal.style.display = 'none';
+                resetDonationForm();
+            }
+        });
+
+        // Reset donation form
+        function resetDonationForm() {
             amountOptions.forEach(opt => opt.classList.remove('selected'));
             customAmount.value = '';
             selectedAmount = 0;
-        });
+            selectedPaymentMethod = null;
+        }
 
         // Show installation instructions
         showInstructionsBtn.addEventListener('click', function() {
